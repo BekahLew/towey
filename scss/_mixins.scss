@@ -82,3 +82,76 @@
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
+
+@mixin gray-background {
+  background: rgba(57, 57, 57, 0.6);
+  border-radius: 10px;
+}
+
+// Custom Styles
+
+// Trans
+@mixin slow-trans {
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+@mixin med-trans {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@mixin fast-trans {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+// Hover BG Gradient
+@mixin hover-gradient {
+  background: -webkit-linear-gradient(transparent, brown);
+    background: -moz-linear-gradient(transparent, brown);
+    background: -o-linear-gradient(transparent, brown);
+    background: linear-gradient(transparent, brown);
+    
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+    
+    background-size:1px 200px;
+    border-radius: 10px;
+    cursor:pointer;
+    &:hover {
+      background-position:100px;
+    }
+  @include slow-trans;
+}
+
+@mixin btn-line {
+    position: relative;
+    &:after {
+    content: ""; 
+    background: brown; 
+    bottom: 15px;
+    height: 2px; 
+    width: 26%; 
+    display: block; 
+    position: absolute; 
+    left: 37%; 
+    @include fast-trans;
+    }
+        &:hover {
+            color: #fff;
+        &:after {
+            width: 70%; 
+            left: 15%; 
+            @include med-trans;
+        }
+    }
+}

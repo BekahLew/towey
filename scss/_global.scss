@@ -1,0 +1,13 @@
+.btn {
+	@include btn-line;
+	@include hover-gradient;
+	border: none;
+	&:after {
+		
+	}
+}
+
+a:focus,
+button:focus {
+	outline: none;
+}
