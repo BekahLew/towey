@@ -114,10 +114,10 @@
 
 // Hover BG Gradient
 @mixin hover-gradient {
-  background: -webkit-linear-gradient(transparent, brown);
-    background: -moz-linear-gradient(transparent, brown);
-    background: -o-linear-gradient(transparent, brown);
-    background: linear-gradient(transparent, brown);
+  background: -webkit-linear-gradient(transparent, #90533c);
+    background: -moz-linear-gradient(transparent, #90533c);
+    background: -o-linear-gradient(transparent, #90533c);
+    background: linear-gradient(transparent, #90533c);
     
     -webkit-transition: background 1s ease-out;
     -moz-transition: background 1s ease-out;
