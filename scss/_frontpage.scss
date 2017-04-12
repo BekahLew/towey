@@ -56,7 +56,6 @@ body {
 		color: #fff;
 	}
 	.service-intro {
-		// @extend %gray-bg;
 		padding: 5px 0 5px 0;
 	}
 	.service-text {
@@ -64,19 +63,38 @@ body {
 	}
 }
 #portfolio {
-	background: #e3cba9;
-	background: -moz-linear-gradient(top, #e3cba9 0%, #433327 100%);
-	background: -webkit-gradient(top top, right top, color-stop(0%, #e3cba9), color-stop(100%, #433327));
-	background: -webkit-linear-gradient(top, #e3cba9 0%, #433327 100%);
-	background: -o-linear-gradient(top, #e3cba9 0%, #433327 100%);
-	background: -ms-linear-gradient(top, #e3cba9 0%, #433327 100%);
-	background: linear-gradient(to bottom, #e3cba9 0%, #433327 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+	@extend %brown-gradient-bg;
 	padding-top: 50px;
-	.section-heading { color: rgba(0,0,0,0.7); }
+	.section-heading { @extend %heading-color; }
+	.portfolio-item .portfolio-caption { background-color: #fff0db; }
 }
 
-// #about {
-// 	background: #e3cba9;
-// }
+#about {
+	@extend %brown-gradient-bg;
+	@extend %heading-color;
+	.section-heading {
+		@extend %text-color;
+	}
+	.timeline {
+		&:before { background-color: #262628; }
+		.timeline-image {
+			&:last-child { @extend %heading-color; }
+			border: 3px solid #262628;
+		}
+		.timeline-panel { 
+			@extend %heading-color; 
+			.timeline-heading {
+				@extend %text-color;
+			}
+		}
+	}
+}
 
+#team {
+	.home-quote {
+		font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 38px;
+		font-style: italic;
+		line-height: 1.3em;
+	}
+}

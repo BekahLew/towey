@@ -1,6 +1,5 @@
 body {
-	// background: #847152;
-	// background: #804836;
+	background-color: #fff0db;
 }
 a {
 	cursor: pointer;
@@ -26,6 +25,14 @@ button:focus {
 	}
 }
 
-#mainNav.navbar-shrink {
-	background: #433327;
+section#contact {
+	background-image: url('/img/home/contact.jpg');
+	background-size: cover;
+	color: #fff;
+	padding: 60px 30px;
+}
+
+footer {
+	background-color: #222;
+	color: #fff;
 }
