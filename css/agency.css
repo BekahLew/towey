@@ -3,8 +3,8 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-#mainNav .nav-item, .intro-text .intro-lead-in,
-.intro-text .intro-heading, #services .section-subheading {
+#mainNav .nav-item, header .intro-text .intro-lead-in,
+header .intro-text .intro-heading, #services .section-subheading {
   text-shadow: 6px 5px 3px #393939; }
 
 #services .service-text {
@@ -12,7 +12,7 @@
   border-radius: 15px;
   padding: 10px; }
 
-#portfolio, #about {
+#portfolio, #about, .shop .shop-ov {
   background: #e3cba9;
   background: -moz-linear-gradient(top, #e3cba9 0%, #433327 100%);
   background: -webkit-gradient(top top, right top, color-stop(0%, #e3cba9), color-stop(100%, #433327));
@@ -32,7 +32,8 @@ body {
   background-color: #fff0db; }
 
 a {
-  cursor: pointer; }
+  cursor: pointer;
+  color: #fed136; }
 
 .btn {
   position: relative;
@@ -77,12 +78,34 @@ a {
   .btn:hover {
     background-position: 100px; }
 
+@media (min-width: 992px) {
+  .navbar-nav #shop {
+    background-color: #fed136;
+    border-radius: 8px;
+    height: 40px;
+    margin-top: 6px;
+    transition: all 0.3s ease-in-out; }
+    .navbar-nav #shop a {
+      padding: 2px; }
+    .navbar-nav #shop:hover {
+      border-radius: 8px;
+      background-color: #553d1f;
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.1, 1.1); } }
+
+@media (min-width: 992px) {
+  #mainNav .container .navbar-nav #shop .nav-link {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out; }
+    #mainNav .container .navbar-nav #shop .nav-link:hover {
+      color: #fff;
+      transition: all 0.3s ease-in-out; } }
+
 a:focus,
 button:focus {
   outline: none; }
-
-.timeline .timeline-panel {
-  color: #fff; }
 
 section#contact {
   background-image: url("/img/home/contact.jpg");
@@ -93,6 +116,9 @@ section#contact {
 footer {
   background-color: #222;
   color: #fff; }
+
+section {
+  padding-bottom: 50px; }
 
 body {
   margin: 0;
@@ -111,19 +137,47 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
-.intro-text .intro-lead-in {
-  background: rgba(57, 57, 57, 0.4);
-  border-radius: 25px;
-  padding: 10px 0;
-  width: 70%;
-  margin: 0 auto; }
+.home-video {
+  text-align: center;
+  padding-top: 100px; }
+  @media (min-width: 576px) {
+    .home-video iframe {
+      height: 500px; } }
+  @media (min-width: 992px) {
+    .home-video iframe {
+      width: 75%; } }
+  @media (min-width: 1200px) {
+    .home-video iframe {
+      width: 60%; } }
+
+#about,
+#services,
+#portfolio,
+#team {
+  padding-top: 50px; }
+
+@media (max-width: 400px) {
+  header {
+    padding-top: 50px; } }
+
+@media (min-width: 768px) {
+  header .intro-text {
+    padding-top: 400px; } }
+
+header .intro-text .intro-lead-in,
+header .intro-text .intro-heading {
+  font-size: 60px; }
+
+header .intro-text .intro-lead-in {
+  font-size: 20px;
+  padding: 10px 0; }
 
 #services {
   color: #fff;
   padding: 30px 0; }
   @media (min-width: 768px) {
     #services {
-      padding: 100px 0; } }
+      padding: 60px 0; } }
   #services .section-subheading {
     margin-bottom: 30px; }
     @media (min-width: 768px) {
@@ -134,10 +188,8 @@ body {
   #services .service-intro {
     padding: 5px 0 5px 0; }
 
-#portfolio {
-  padding-top: 50px; }
-  #portfolio .portfolio-item .portfolio-caption {
-    background-color: #fff0db; }
+#portfolio .portfolio-item .portfolio-caption {
+  background-color: #fff0db; }
 
 #about .timeline:before {
   background-color: #262628; }
@@ -145,11 +197,46 @@ body {
 #about .timeline .timeline-image {
   border: 3px solid #262628; }
 
+.timeline .timeline-panel {
+  color: #fff; }
+
 #team .home-quote {
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 38px;
   font-style: italic;
   line-height: 1.3em; }
+
+#team .team-member img {
+  border: 7px solid #222; }
+
+.shop .shop-ov {
+  padding: 60px 0;
+  position: relative;
+  text-align: center; }
+  .shop .shop-ov .shop-item {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    min-height: 300px;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 30px 20px 20px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .shop .shop-ov .shop-item {
+        margin: 20px 30px 40px 30px; } }
+    .shop .shop-ov .shop-item img {
+      margin-bottom: 20px;
+      height: 120px; }
+    .shop .shop-ov .shop-item h2 {
+      font-size: 20px;
+      margin-top: 10px; }
+      .shop .shop-ov .shop-item h2:hover {
+        color: #fff; }
+    .shop .shop-ov .shop-item p {
+      font-size: 20px;
+      color: #fff; }
+      .shop .shop-ov .shop-item p:hover {
+        color: #fed136; }
 
 body {
   overflow-x: hidden;
@@ -170,6 +257,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700; }
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  text-transform: none;
+  font-size: 50px; }
 
 .btn-primary {
   color: white;
@@ -297,6 +389,8 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
+    #mainNav .navbar-nav #shop a {
+      padding: 10px !important; }
     #mainNav .navbar-nav .nav-item .nav-link {
       padding: 1.1em 1em !important; }
     #mainNav.navbar-shrink {
@@ -316,7 +410,8 @@ header {
   background-size: cover;
   -o-background-size: cover;
   text-align: center;
-  color: white; }
+  color: white;
+  padding: 100px 15px 150px; }
   header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px; }
@@ -333,22 +428,25 @@ header {
       font-size: 50px;
       line-height: 50px;
       margin-bottom: 25px; }
+      @media (max-width: 768px) {
+        header .intro-text .intro-heading {
+          font-size: 50px; } }
 
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
+    padding-top: 150px;
     padding-bottom: 200px; }
     header .intro-text .intro-lead-in {
       font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-style: italic;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 40px;
       margin-bottom: 25px; }
     header .intro-text .intro-heading {
       font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 75px;
+      font-size: 60px;
       line-height: 75px;
       margin-bottom: 50px; } }
 

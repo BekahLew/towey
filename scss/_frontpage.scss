@@ -25,17 +25,46 @@ body {
 	}
 }
 
-.intro-text {
-	 	.intro-lead-in,
-	 	.intro-heading {
-	 		@extend %text-shad;
-	 	}
-	.intro-lead-in {
-		background: rgba(57, 57, 57, 0.4);
-		border-radius: 25px;
-		padding: 10px 0;
-		width: 70%;
-		margin: 0 auto;
+.home-video {
+	text-align: center;
+	padding-top: 100px;
+	iframe {
+		@media (min-width: 576px) {
+			height: 500px;
+		}
+		@media (min-width: 992px) {
+			width: 75%;
+		}
+		@media (min-width: 1200px) {
+			width: 60%;
+		}
+	}
+}
+
+#about,
+#services,
+#portfolio,
+#team {
+	padding-top: 50px;
+}
+
+header {
+	@media (max-width: 400px) {
+		padding-top: 50px;
+	}
+	.intro-text {
+		@media (min-width: 768px) {
+			padding-top: 400px;
+		}
+		 	.intro-lead-in,
+		 	.intro-heading {
+		 		@extend %text-shad;
+		 		font-size: 60px;
+		 	}
+		.intro-lead-in {
+			font-size: 20px;
+			padding: 10px 0;
+		}
 	}
 }
 
@@ -43,7 +72,7 @@ body {
 	color: #fff;
 	padding: 30px 0;
 	@media (min-width: 768px) {
-		padding: 100px 0;
+		padding: 60px 0;
 	}
 	.section-subheading {
 		margin-bottom: 30px;
@@ -64,7 +93,6 @@ body {
 }
 #portfolio {
 	@extend %brown-gradient-bg;
-	padding-top: 50px;
 	.section-heading { @extend %heading-color; }
 	.portfolio-item .portfolio-caption { background-color: #fff0db; }
 }
@@ -90,11 +118,20 @@ body {
 	}
 }
 
+.timeline {
+	.timeline-panel {
+		color: #fff;
+	}
+}
+
 #team {
 	.home-quote {
 		font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
 		font-size: 38px;
 		font-style: italic;
 		line-height: 1.3em;
+	}
+	.team-member img {
+		border: 7px solid #222;
 	}
 }

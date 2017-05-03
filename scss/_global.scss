@@ -3,26 +3,50 @@ body {
 }
 a {
 	cursor: pointer;
+	color: $color-primary;
 }
 
 .btn {
 	@include btn-line;
 	@include hover-gradient;
 	border: none;
-	&:after {
-		
+}
+
+.navbar-nav #shop {
+	@media (min-width: 992px) {
+		background-color: $color-primary;
+		border-radius: 8px;
+		height: 40px;
+	    margin-top: 6px;
+	    transition: all 0.3s ease-in-out;
+		a {
+			padding: 2px;
+		}
+		&:hover {
+			border-radius: 8px;
+			background-color: #553d1f;
+			transition: all 0.3s ease-in-out; 
+			transform: scale(1.1, 1.1);
+		}
+	}
+}
+
+#mainNav .container .navbar-nav #shop .nav-link { 
+	@media (min-width: 992px) {
+		color: rgba(0,0,0,0.8); 
+		text-shadow: none;
+		font-weight: 700;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: #fff;
+			transition: all 0.3s ease-in-out; 
+		}
 	}
 }
 
 a:focus,
 button:focus {
 	outline: none;
-}
-
-.timeline {
-	.timeline-panel {
-		color: #fff;
-	}
 }
 
 section#contact {
@@ -35,4 +59,8 @@ section#contact {
 footer {
 	background-color: #222;
 	color: #fff;
+}
+
+section {
+	padding-bottom: 50px;
 }
