@@ -5,6 +5,7 @@
 		text-align: center;
 		@extend %brown-gradient-bg;
 		.shop-item {
+			@extend %box-shad;
 			background: $text-color;
 			border-radius: 8px;
 			min-height: 300px;
@@ -33,6 +34,9 @@
 					color: $color-primary;
 				}
 			}
+		}
+		header {
+			height: 700px;
 		}
 	}
 }

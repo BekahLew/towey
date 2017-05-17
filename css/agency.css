@@ -3,8 +3,8 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-#mainNav .nav-item, header .intro-text .intro-lead-in,
-header .intro-text .intro-heading, #services .section-subheading {
+#mainNav .nav-item, .frontpage header .intro-text .intro-lead-in,
+.frontpage header .intro-text .intro-heading, #services .section-subheading {
   text-shadow: 6px 5px 3px #393939; }
 
 #services .service-text {
@@ -27,6 +27,25 @@ header .intro-text .intro-heading, #services .section-subheading {
 
 #about .section-heading, #about .timeline .timeline-panel .timeline-heading {
   color: rgba(0, 0, 0, 0.7); }
+
+.navbar-nav #shop {
+  background-color: #fed136;
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 6px;
+  transition: all 0.3s ease-in-out; }
+  .navbar-nav #shop a {
+    padding: 2px; }
+  .navbar-nav #shop:hover {
+    border-radius: 8px;
+    background-color: #553d1f;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1, 1.1); }
+
+.shop .shop-ov .shop-item {
+  -webkit-box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76);
+  -moz-box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76);
+  box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76); }
 
 body {
   background-color: #fff0db; }
@@ -77,21 +96,6 @@ a {
       transition: all 0.5s ease-out; }
   .btn:hover {
     background-position: 100px; }
-
-@media (min-width: 992px) {
-  .navbar-nav #shop {
-    background-color: #fed136;
-    border-radius: 8px;
-    height: 40px;
-    margin-top: 6px;
-    transition: all 0.3s ease-in-out; }
-    .navbar-nav #shop a {
-      padding: 2px; }
-    .navbar-nav #shop:hover {
-      border-radius: 8px;
-      background-color: #553d1f;
-      transition: all 0.3s ease-in-out;
-      transform: scale(1.1, 1.1); } }
 
 @media (min-width: 992px) {
   #mainNav .container .navbar-nav #shop .nav-link {
@@ -149,6 +153,8 @@ body {
   @media (min-width: 1200px) {
     .home-video iframe {
       width: 60%; } }
+  .home-video div {
+    color: white; }
 
 #about,
 #services,
@@ -157,18 +163,18 @@ body {
   padding-top: 50px; }
 
 @media (max-width: 400px) {
-  header {
+  .frontpage header {
     padding-top: 50px; } }
 
 @media (min-width: 768px) {
-  header .intro-text {
+  .frontpage header .intro-text {
     padding-top: 400px; } }
 
-header .intro-text .intro-lead-in,
-header .intro-text .intro-heading {
+.frontpage header .intro-text .intro-lead-in,
+.frontpage header .intro-text .intro-heading {
   font-size: 60px; }
 
-header .intro-text .intro-lead-in {
+.frontpage header .intro-text .intro-lead-in {
   font-size: 20px;
   padding: 10px 0; }
 
@@ -237,6 +243,8 @@ header .intro-text .intro-lead-in {
       color: #fff; }
       .shop .shop-ov .shop-item p:hover {
         color: #fed136; }
+  .shop .shop-ov header {
+    height: 700px; }
 
 body {
   overflow-x: hidden;
@@ -401,7 +409,6 @@ h1 {
         font-size: 1.25em; } }
 
 header {
-  background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -431,6 +438,13 @@ header {
       @media (max-width: 768px) {
         header .intro-text .intro-heading {
           font-size: 50px; } }
+
+header {
+  background-image: url("../img/header-bg.jpg"); }
+
+@media (min-width: 768px) {
+  .frontpage header .intro-text {
+    padding-top: 150px; } }
 
 @media (min-width: 768px) {
   header .intro-text {

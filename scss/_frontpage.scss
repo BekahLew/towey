@@ -39,6 +39,7 @@ body {
 			width: 60%;
 		}
 	}
+	div { color: white; }
 }
 
 #about,
@@ -48,7 +49,7 @@ body {
 	padding-top: 50px;
 }
 
-header {
+.frontpage header {
 	@media (max-width: 400px) {
 		padding-top: 50px;
 	}

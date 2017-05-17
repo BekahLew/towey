@@ -140,7 +140,6 @@ h1 {
 }
 
 header {
-    background-image: url('../img/header-bg.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -170,6 +169,14 @@ header {
         }
     }
 }
+
+header {
+    background-image: url('../img/header-bg.jpg');
+}
+
+@media (min-width: 768px) {
+  .frontpage header .intro-text {
+    padding-top: 150px; } }
 
 @media(min-width:768px) {
     header {

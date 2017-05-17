@@ -13,22 +13,7 @@ a {
 }
 
 .navbar-nav #shop {
-	@media (min-width: 992px) {
-		background-color: $color-primary;
-		border-radius: 8px;
-		height: 40px;
-	    margin-top: 6px;
-	    transition: all 0.3s ease-in-out;
-		a {
-			padding: 2px;
-		}
-		&:hover {
-			border-radius: 8px;
-			background-color: #553d1f;
-			transition: all 0.3s ease-in-out; 
-			transform: scale(1.1, 1.1);
-		}
-	}
+	@extend %sm-btn;
 }
 
 #mainNav .container .navbar-nav #shop .nav-link { 
