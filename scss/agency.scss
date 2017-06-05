@@ -4,6 +4,7 @@
 @import "global.scss";
 @import "frontpage.scss";
 @import "shop";
+@import "subpage";
 
 
 // Global Components
@@ -170,7 +171,7 @@ header {
     }
 }
 
-header {
+.frontpage header {
     background-image: url('../img/header-bg.jpg');
 }
 

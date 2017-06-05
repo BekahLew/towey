@@ -246,6 +246,10 @@ body {
   .shop .shop-ov header {
     height: 700px; }
 
+.about header {
+  background-image: url("../img/about/film.jpg");
+  background-size: cover; }
+
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -439,7 +443,7 @@ header {
         header .intro-text .intro-heading {
           font-size: 50px; } }
 
-header {
+.frontpage header {
   background-image: url("../img/header-bg.jpg"); }
 
 @media (min-width: 768px) {
