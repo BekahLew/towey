@@ -4,15 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 #mainNav .nav-item, .frontpage header .intro-text .intro-lead-in,
-.frontpage header .intro-text .intro-heading, #services .section-subheading {
-  text-shadow: 6px 5px 3px #393939; }
+.frontpage header .intro-text .intro-heading, #services .section-subheading, .subpage header .intro-text {
+  text-shadow: 6px 3px 10px #393939; }
 
 #services .service-text {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 10px; }
 
-#portfolio, #about, .shop .shop-ov {
+#portfolio, #about {
   background: #e3cba9;
   background: -moz-linear-gradient(top, #e3cba9 0%, #433327 100%);
   background: -webkit-gradient(top top, right top, color-stop(0%, #e3cba9), color-stop(100%, #433327));
@@ -28,21 +28,26 @@
 #about .section-heading, #about .timeline .timeline-panel .timeline-heading {
   color: rgba(0, 0, 0, 0.7); }
 
-.navbar-nav #shop {
+.btn-sm, .navbar-nav #shop {
   background-color: #fed136;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
   border-radius: 8px;
   height: 40px;
   margin-top: 6px;
+  padding-top: 10px;
+  text-transform: uppercase;
   transition: all 0.3s ease-in-out; }
-  .navbar-nav #shop a {
+  .btn-sm a, .navbar-nav #shop a {
     padding: 2px; }
-  .navbar-nav #shop:hover {
+  .btn-sm:hover, .navbar-nav #shop:hover {
     border-radius: 8px;
     background-color: #553d1f;
+    color: #fed136;
     transition: all 0.3s ease-in-out;
     transform: scale(1.1, 1.1); }
 
-.shop .shop-ov .shop-item {
+.shop .shop-ov .shop-item .shop-img {
   -webkit-box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76);
   -moz-box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76);
   box-shadow: 0px 11px 25px 0px rgba(50, 50, 50, 0.76); }
@@ -54,7 +59,7 @@ a {
   cursor: pointer;
   color: #fed136; }
 
-.btn {
+.btn-xl {
   position: relative;
   background: -webkit-linear-gradient(transparent, #90533c);
   background: -moz-linear-gradient(transparent, #90533c);
@@ -72,7 +77,7 @@ a {
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
   border: none; }
-  .btn:after {
+  .btn-xl:after {
     content: "";
     background: #fff;
     bottom: 15px;
@@ -85,27 +90,36 @@ a {
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-  .btn:hover {
+  .btn-xl:hover {
     color: #262628; }
-    .btn:hover:after {
+    .btn-xl:hover:after {
       width: 60%;
       left: 20%;
       -webkit-transition: all 0.5s ease-out;
       -moz-transition: all 0.5s ease-out;
       -o-transition: all 0.5s ease-out;
       transition: all 0.5s ease-out; }
-  .btn:hover {
+  .btn-xl:hover {
     background-position: 100px; }
 
-@media (min-width: 992px) {
-  #mainNav .container .navbar-nav #shop .nav-link {
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: none;
-    font-weight: 700;
-    transition: all 0.3s ease-in-out; }
-    #mainNav .container .navbar-nav #shop .nav-link:hover {
-      color: #fff;
-      transition: all 0.3s ease-in-out; } }
+.navbar-nav #shop {
+  padding-left: 5px;
+  padding-top: 0; }
+  @media (max-width: 992px) {
+    .navbar-nav #shop {
+      max-width: 100px;
+      padding-left: 28px;
+      text-shadow: 4px 4px 10px #000; } }
+
+#mainNav .container .navbar-nav #shop .nav-link {
+  color: rgba(0, 0, 0, 0.8); }
+  @media (min-width: 992px) {
+    #mainNav .container .navbar-nav #shop .nav-link {
+      text-shadow: none;
+      transition: all 0.3s ease-in-out; }
+      #mainNav .container .navbar-nav #shop .nav-link:hover {
+        transition: all 0.3s ease-in-out;
+        color: #fed136; } }
 
 a:focus,
 button:focus {
@@ -154,7 +168,7 @@ body {
     .home-video iframe {
       width: 60%; } }
   .home-video div {
-    color: white; }
+    color: #fff; }
 
 #about,
 #services,
@@ -216,49 +230,102 @@ body {
   border: 7px solid #222; }
 
 .shop .shop-ov {
+  background: #fff0db;
   padding: 60px 0;
-  position: relative;
-  text-align: center; }
-  .shop .shop-ov .shop-item {
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    min-height: 300px;
-    display: inline-block;
-    margin: 20px 0;
-    padding: 30px 20px 20px;
+  position: relative; }
+  .shop .shop-ov h1 {
     text-align: center; }
-    @media (min-width: 768px) {
+  .shop .shop-ov h2 {
+    font-size: 23px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 100; }
+  .shop .shop-ov p {
+    font-size: 20px; }
+  .shop .shop-ov .shop-item {
+    text-align: left; }
+    .shop .shop-ov .shop-item:nth-child(2n+1) {
+      text-align: right; }
+    @media (max-width: 768px) {
       .shop .shop-ov .shop-item {
-        margin: 20px 30px 40px 30px; } }
-    .shop .shop-ov .shop-item img {
-      margin-bottom: 20px;
-      height: 120px; }
-    .shop .shop-ov .shop-item h2 {
-      font-size: 20px;
-      margin-top: 10px; }
-      .shop .shop-ov .shop-item h2:hover {
+        padding: 0 50px; } }
+    .shop .shop-ov .shop-item .shop-img {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      min-height: 300px;
+      display: inline-block;
+      margin: 20px 15px;
+      padding: 30px 20px 20px;
+      text-align: center;
+      min-width: 250px;
+      transition: all 0.5s ease; }
+      .shop .shop-ov .shop-item .shop-img .shop-product-img {
+        margin-bottom: 20px;
+        height: 120px; }
+      .shop .shop-ov .shop-item .shop-img p {
+        font-size: 20px;
         color: #fff; }
-    .shop .shop-ov .shop-item p {
-      font-size: 20px;
-      color: #fff; }
-      .shop .shop-ov .shop-item p:hover {
-        color: #fed136; }
-  .shop .shop-ov header {
-    height: 700px; }
+        .shop .shop-ov .shop-item .shop-img p span {
+          color: #fed136; }
+    .shop .shop-ov .shop-item .text-wrap {
+      display: inline-block;
+      font-size: 23px;
+      max-height: 160px;
+      overflow: hidden; }
+      .shop .shop-ov .shop-item .text-wrap.open {
+        max-height: 100%; }
 
-.about header {
-  background-image: url("../img/about/film.jpg");
-  background-size: cover; }
+.subpage header {
+  height: 500px; }
+  .subpage header .intro-text {
+    padding: 40px 30px;
+    border-radius: 0; }
+    .subpage header .intro-text .intro-heading {
+      margin-bottom: 0; }
+
+.privacy-text {
+  padding-bottom: 50px; }
+
+.directions .map {
+  text-align: center;
+  padding-bottom: 30px; }
+  .directions .map iframe {
+    padding: 20px; }
+
+.directions h2 {
+  text-align: center; }
+
+.directions .directions-top {
+  padding-bottom: 20px; }
+
+.directions .directions-header {
+  font-size: 20px; }
+
+.directions section {
+  position: relative; }
+  .directions section .print-icon {
+    background-color: #fed136;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 10px 25px 10px 22px;
+    position: fixed;
+    text-align: center;
+    top: 68.3%;
+    right: -10px; }
+    @media (max-width: 992px) {
+      .directions section .print-icon {
+        display: none; } }
 
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: auto; }
 
 .text-primary {
   color: #fed136 !important; }
 
 p {
-  line-height: 1.75; }
+  line-height: 1.4; }
 
 a {
   color: #fed136; }
@@ -273,7 +340,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: 'Roboto Slab', serif;
   text-transform: none;
-  font-size: 50px; }
+  font-size: 36px;
+  padding-bottom: 15px; }
+
+h2 {
+  text-transform: none; }
 
 .btn-primary {
   color: white;
@@ -370,6 +441,9 @@ h1 {
     text-transform: uppercase;
     padding: 13px;
     right: 0; }
+    @media (min-width: 992px) {
+      #mainNav .navbar-toggler {
+        margin-top: 8px; } }
   #mainNav .container {
     padding: 0; }
     #mainNav .container .navbar-brand {
@@ -384,7 +458,7 @@ h1 {
       text-transform: uppercase;
       font-weight: 400;
       letter-spacing: 1px;
-      color: white; }
+      color: #fff; }
       #mainNav .container .navbar-nav .nav-item .nav-link:hover, #mainNav .container .navbar-nav .nav-item .nav-link.active {
         color: #fed136; }
 
@@ -413,13 +487,13 @@ h1 {
         font-size: 1.25em; } }
 
 header {
-  background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
   color: white;
   padding: 100px 15px 150px; }
@@ -444,7 +518,49 @@ header {
           font-size: 50px; } }
 
 .frontpage header {
-  background-image: url("../img/header-bg.jpg"); }
+  background-image: url("../img/header-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.shop header {
+  background: url("/img/shop/masthead-shop.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.privacy header {
+  background: url("/img/subpages/masthead-privacy.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.about header {
+  background-image: url("../img/about/film.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.directions header {
+  background-image: url("../img/about/film.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 @media (min-width: 768px) {
   .frontpage header .intro-text {
@@ -468,8 +584,12 @@ header {
       line-height: 75px;
       margin-bottom: 50px; } }
 
+@media (max-width: 768px) {
+  .frontpage header .intro-text .intro-heading {
+    font-size: 45px; } }
+
 section {
-  padding: 100px 0; }
+  padding: 100px 0 0; }
   section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -484,7 +604,7 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding: 150px 0; } }
+    padding: 75px 0 50px; } }
 
 .service-heading {
   margin: 15px 0;

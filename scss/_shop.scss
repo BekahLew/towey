@@ -1,42 +1,58 @@
 .shop {
 	.shop-ov {
+		background: #fff0db;
 		padding: 60px 0;
 		position: relative;
-		text-align: center;
-		@extend %brown-gradient-bg;
-		.shop-item {
-			@extend %box-shad;
-			background: $text-color;
-			border-radius: 8px;
-			min-height: 300px;
-			display: inline-block;
-			margin: 20px 0;
-			padding: 30px 20px 20px;
-			text-align: center;
-			@media (min-width: 768px) {
-				margin: 20px 30px 40px 30px;
-			}
-			img {
-				margin-bottom: 20px;
-				height: 120px;
-			}
-			h2 {
-				font-size: 20px;
-				margin-top: 10px;
-				&:hover {
-					color: #fff;
-				}
-			}
-			p {
-				font-size: 20px;
-				color: #fff;
-				&:hover {
-					color: $color-primary;
-				}
-			}
+		h1 { text-align: center; }
+		h2 {
+			font-size: 23px;
+			max-width: 900px;
+			margin: 0 auto;
+			font-weight: 100;
 		}
-		header {
-			height: 700px;
+		p {
+			font-size: 20px;
+		}
+		.shop-item {
+			text-align: left;
+			&:nth-child(2n+1) {
+				text-align: right;
+			}
+			@media (max-width: 768px) {
+				padding: 0 50px;
+			}
+			.shop-img {
+				@extend %box-shad;
+				background: $text-color;
+				border-radius: 8px;
+				min-height: 300px;
+				display: inline-block;
+				margin: 20px 15px;
+				padding: 30px 20px 20px;
+				text-align: center;
+				min-width: 250px;
+				transition: all 0.5s ease;
+				.shop-product-img {
+					margin-bottom: 20px;
+					height: 120px;
+				}
+				p {
+					font-size: 20px;
+					color: #fff;
+					span {
+						color: $color-primary;
+					}
+				}
+			}
+			.text-wrap {
+				display: inline-block;
+				font-size: 23px;
+				max-height: 160px;
+    			overflow: hidden;
+    			&.open {
+    				max-height: 100%;
+    			}
+			}
 		}
 	}
 }

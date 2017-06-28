@@ -1,5 +1,5 @@
 %text-shad {
-	text-shadow: 6px 5px 3px #393939;
+	text-shadow: 6px 3px 10px #393939
 }
 
 %gray-bg {
@@ -24,9 +24,13 @@
 
 %sm-btn {
 	background-color: $color-primary;
+	color: rgba(0,0,0,0.8);
+	font-weight: 700;
 	border-radius: 8px;
 	height: 40px;
     margin-top: 6px;
+    padding-top: 10px;
+    text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     a {
 		padding: 2px;
@@ -34,6 +38,7 @@
 	&:hover {
 		border-radius: 8px;
 		background-color: #553d1f;
+		color: $color-primary;
 		transition: all 0.3s ease-in-out; 
 		transform: scale(1.1, 1.1);
 	}

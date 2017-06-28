@@ -1,0 +1,15 @@
+body {visibility:hidden; max-height: 800px;}
+.print {visibility:visible;}
+@media print {
+	.map,
+	#mainNav,
+	.top,
+	#contact,
+	footer,
+	h2 {
+		display: none;
+	}
+	.directions .directions-header { font-size: 20px; }
+	.directions-header::first-letter { margin-top: 0; }
+	.container { padding-top: 10px; }
+}

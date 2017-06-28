@@ -6,12 +6,12 @@
 @import "shop";
 @import "subpage";
 
-
 // Global Components
 
 body {
     overflow-x: hidden;
     @include body-font;
+    height: auto;
 }
 
 .text-primary {
@@ -19,7 +19,7 @@ body {
 }
 
 p {
-    line-height: 1.75;
+    line-height: 1.4;
 }
 
 a {
@@ -40,7 +40,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-family: 'Roboto Slab', serif;
     text-transform: none;
-    font-size: 50px;
+    font-size: 36px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    text-transform: none;
 }
 
 // Restyled Primary Buttons
@@ -73,6 +78,9 @@ h1 {
         @include heading-font;
         padding: 13px;
         right: 0;
+        @media (min-width: 992px) {
+            margin-top: 8px;
+        }
     }
     .container {
         padding: 0;
@@ -94,7 +102,7 @@ h1 {
                     @include heading-font;
                     font-weight: 400;
                     letter-spacing: 1px;
-                    color: white;
+                    color: #fff;
                     &:hover,
                     &.active {
                         color: $theme-primary;
@@ -141,9 +149,7 @@ h1 {
 }
 
 header {
-    background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
     @include background-cover;
     text-align: center;
     color: white;
@@ -173,6 +179,27 @@ header {
 
 .frontpage header {
     background-image: url('../img/header-bg.jpg');
+    @include background-cover;
+}
+
+.shop header {
+    background: url('/img/shop/masthead-shop.jpeg');
+    @include background-cover;
+}
+
+.privacy header {
+    background: url('/img/subpages/masthead-privacy.jpg');
+    @include background-cover;
+}
+
+.about header {
+    background-image: url('../img/about/film.jpg');
+    @include background-cover;
+}
+
+.directions header {
+    background-image: url('../img/about/film.jpg');
+    @include background-cover;
 }
 
 @media (min-width: 768px) {
@@ -202,10 +229,14 @@ header {
     }
 }
 
+.frontpage header .intro-text .intro-heading {
+    @media(max-width:768px) { font-size: 45px; }
+}
+
 // Global Section Styles
 
 section {
-    padding: 100px 0;
+    padding: 100px 0 0;
     h2.section-heading {
         font-size: 40px;
         margin-top: 0;
@@ -223,7 +254,7 @@ section {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 75px 0 50px;
     }
 }
 

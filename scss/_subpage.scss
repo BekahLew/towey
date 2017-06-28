@@ -1,4 +1,38 @@
-.about header {
-    background-image: url('../img/about/film.jpg');
-    background-size: cover;
+.subpage header {
+	height: 500px;
+	.intro-text {
+		@extend %text-shad;
+		padding: 40px 30px;
+		border-radius: 0;
+	.intro-heading {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.privacy-text { padding-bottom: 50px; }
+
+.directions {
+	.map {
+		text-align: center;
+		padding-bottom: 30px;
+		iframe { padding: 20px; }
+	}
+	h2 { text-align: center; }
+	.directions-top { padding-bottom: 20px; }
+	.directions-header { font-size: 20px; }
+	section {
+		position: relative;
+		.print-icon {
+			background-color: $color-primary;
+			border-radius: 3px;
+			color: $text-color;
+			padding: 10px 25px 10px 22px;
+			position: fixed;
+			text-align: center;
+			top: 68.3%;
+			right: -10px;
+			@media (max-width: 992px) { display: none; }
+		}
+	}
 }

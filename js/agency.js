@@ -36,9 +36,8 @@ $(window).scroll(function(){
     $(".frontpage .top").css("opacity", 1 - $(window).scrollTop() / 800);
   });
 
-/*win.scroll(function(){
-  scrollPosition = win.scrollTop();
-  scrollRatio = 1 - scrollPosition / 787;
-  $(".top").css("opacity", scrollRatio);
-*/
+$(document).on('click', '.click-open', function(event) {
+        $('.text-wrap').toggleClass('open');
+    });
+
 })(jQuery); // End of use strict
