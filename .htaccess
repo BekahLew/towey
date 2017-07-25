@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ 
+RewriteCond %{HTTP_HOST} ^memoriestodvd.com[nc]
+RewriteRule ^(.*)$ http://www.memoriestodvd.com/$1 [r=301,nc]
